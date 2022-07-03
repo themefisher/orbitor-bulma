@@ -1,0 +1,155 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "Get in Touch",
+"description": "Contact Us"
+})
+<!-- contact form start -->
+<section class="contact-form-wrap section">
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column is-12">
+                <span class="text-color">Send a message</span>
+                <h3 class="text-md mb-5">Contact Form</h3>
+            </div>
+        </div>
+
+        <div class="columns is-multiline">
+            <div class="column is-8-desktop">
+                <form id="contact-form" class="contact__form" method="post" action="mail.php">
+                 <!-- form message -->
+                    <div class="columns is-multiline">
+                        <div class="column is-12">
+
+                            <div class="notification is-success contact__msg mb-4" style="display:none" role="alert">
+                                Your message was sent successfully.
+                            </div>
+
+                            <select class="input" id="exampleFormControlSelect1">
+                                <option>I Need help in ...</option>
+                                <option>Software Design</option>
+                                <option>Development cycle</option>
+                                <option>Software Development</option>
+                                <option>Maintenance</option>
+                                <option>Process Query</option>
+                                <option>Cost and Duration</option>
+                                <option>Modal Delivery</option>
+                            </select>
+                        </div>
+                        <div class="column is-12">
+                            <input name="subject" id="subject" type="text" class="input" placeholder="Your Subject">
+                        </div>
+                        <div class="column is-12">
+                            <input name="name" id="name" type="text" class="input" placeholder="Your Name">
+                        </div>
+                        <div class="column is-12">
+                            <input name="email" id="email" type="email" class="input" placeholder="Email Address">
+                        </div>
+                        <div class="column is-12">
+                            <textarea name="message" id="message" class="input" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="column is-12">
+                            <button class="btn btn-main" name="submit" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="column is-4-desktop">
+                <div class="short-info">
+                     <ul class="list-unstyled">
+                         <li>
+                            <h5>Call Us</h5>
+                            +88 01672 506 744
+                        </li>
+                        <li>
+                            <h5>Email Us</h5>
+                            contact@mail.com
+                        </li>
+                        <li>
+                            <h5>Location Map</h5>
+                            North Main Street,Brooklyn Australia
+                        </li>
+                    </ul>
+
+                    <ul class="social-icons list-inline mt-5">
+                        <li class="list-inline-item">
+                            <a href="http://www.themefisher.com"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="http://www.themefisher.com"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="http://www.themefisher.com"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+         <div class="columns is-multiline">
+            <div class="column is-12">
+                 <div class="google-map mt-90 mb-6">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-multiline">
+            <div class="column is-4-desktop is-6-tablet">
+                <div class="contact-content">
+                    <h4 class="mb-4">Corporate Office</h4>
+
+                    <ul class="address-block list-unstyled">
+                        <li>
+                            <i class="ti-location-pin mr-3"></i>North Main Street,Brooklyn Australia
+                        </li>
+                        <li>
+                            <i class="ti-email mr-3"></i>Email: contact@mail.com
+                        </li>
+                        <li>
+                            <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column is-4-desktop is-6-tablet">
+                <div class="contact-info">
+                    <h4 class="mb-4">USA Location</h4>
+                    <ul class="address-block list-unstyled">
+                        <li>
+                            <i class="ti-location-pin mr-3"></i>North Main Street,Brooklyn Australia
+                        </li>
+                        <li>
+                            <i class="ti-email mr-3"></i>Email: contact@mail.com
+                        </li>
+                        <li>
+                            <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column is-4-desktop is-6-tablet">
+                <div class="contact-info">
+                    <h4 class="mb-4">Europe</h4>
+                    <ul class="address-block list-unstyled">
+                        <li>
+                            <i class="ti-location-pin mr-3"></i>North Main Street,Brooklyn Australia
+                        </li>
+                        <li>
+                            <i class="ti-email mr-3"></i>Email: contact@mail.com
+                        </li>
+                        <li>
+                            <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')
