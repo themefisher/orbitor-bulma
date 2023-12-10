@@ -48,8 +48,10 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-p {
+.block p {
   line-height: 30px;
+  font-size: 22px;
+  color: #161414b3;
 }
 
 .navbar-toggle .icon-bar {
@@ -651,7 +653,7 @@ ul.dropdown-menu li {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background: url("../images/bg/main-banner1.jpg") no-repeat 80% 50%;
+  background: url("../images/bg/reeler.jpg") no-repeat 80% 50%;
   background-size: cover;
   padding: 120px 0px;
 }
@@ -669,7 +671,7 @@ ul.dropdown-menu li {
   }
 }
 .banner .block h1 {
-  font-size: 75px;
+  font-size: 60px;
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -1.2px;
