@@ -286,9 +286,8 @@ a {
   transition: 0.3s;
 }
 
-a:focus,
-a:hover {
-  color: #FF715B;
+.navs-item a:focus,a:hover {
+  color: #110404 !important ;
   text-decoration: none;
 }
 
@@ -395,7 +394,7 @@ a:focus {
 }
 
 .ml-auto {
-  margin-left: auto !important;
+  margin:auto !important ;
 }
 
 .text-white {
@@ -562,7 +561,7 @@ textarea.input {
   transition: all 0.25s ease;
 }
 #navbar .navbar-link:hover {
-  color: #FF715B !important;
+  color: #545151 !important;
   background-color: transparent !important;
 }
 
@@ -1692,6 +1691,10 @@ ul.dropdown-menu li {
   font-weight: 600;
 }
 
+.footer .copyright a:hover{
+  color: #e6dede !important ;
+}
+
 .lh-35 {
   line-height: 35px;
 }
@@ -1745,5 +1748,9 @@ ul.dropdown-menu li {
 }
 .widget-contact h6 i {
   color: #FF715B;
+}
+
+.footer-menu a:hover {
+  color: #10dab7 !important ;
 }
 /*# sourceMappingURL=style.css.map */
