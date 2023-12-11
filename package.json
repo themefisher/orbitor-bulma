@@ -1,8 +1,8 @@
 {
-  "name": "orbitor-bulma",
+  "name": "Buhrata",
   "version": "1.0.0",
-  "description": "orbitor free bulma agency template",
-  "author": "Themefisher",
+  "description": "Buhrata",
+  "author": "Nextgen Vidhya Pvt Ltd",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
