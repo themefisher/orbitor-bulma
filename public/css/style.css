@@ -22,6 +22,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #111;
 }
 
+.heading h2{
+  font-weight: 800;
+}
+
 h1, .h1 {
   font-size: 2.5rem;
 }
@@ -48,10 +52,8 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-.block p {
+p {
   line-height: 30px;
-  font-size: 22px;
-  color: #161414b3;
 }
 
 .navbar-toggle .icon-bar {
@@ -286,8 +288,9 @@ a {
   transition: 0.3s;
 }
 
-.navs-item a:focus,a:hover {
-  color: #110404 !important ;
+a:focus,
+a:hover {
+  color: #FF715B;
   text-decoration: none;
 }
 
@@ -394,7 +397,7 @@ a:focus {
 }
 
 .ml-auto {
-  margin:auto !important ;
+  margin-left: auto !important;
 }
 
 .text-white {
@@ -561,7 +564,7 @@ textarea.input {
   transition: all 0.25s ease;
 }
 #navbar .navbar-link:hover {
-  color: #545151 !important;
+  color: #FF715B !important;
   background-color: transparent !important;
 }
 
@@ -639,8 +642,8 @@ ul.dropdown-menu li {
 }
 
 .bg-1 {
-  background: url("../images/bg/section-bg5.jpg") no-repeat 50% 50%;
-  background-size: cover;
+  background: url("../images/bg/influencer11.jpg") no-repeat;
+  background-size:cover;
 }
 
 .bg-2 {
@@ -670,7 +673,7 @@ ul.dropdown-menu li {
   }
 }
 .banner .block h1 {
-  font-size: 60px;
+  font-size: 75px;
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -1.2px;
@@ -1013,7 +1016,7 @@ ul.dropdown-menu li {
   }
 }
 .cta {
-  background: url("../images/bg/bg-2.jpg") no-repeat;
+  background: url("../images/bg/influencer.jpg") no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1691,10 +1694,6 @@ ul.dropdown-menu li {
   font-weight: 600;
 }
 
-.footer .copyright a:hover{
-  color: #e6dede !important ;
-}
-
 .lh-35 {
   line-height: 35px;
 }
@@ -1748,9 +1747,5 @@ ul.dropdown-menu li {
 }
 .widget-contact h6 i {
   color: #FF715B;
-}
-
-.footer-menu a:hover {
-  color: #10dab7 !important ;
 }
 /*# sourceMappingURL=style.css.map */
