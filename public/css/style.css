@@ -22,10 +22,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #111;
 }
 
-.heading h2{
-  font-weight: 800;
-}
-
 h1, .h1 {
   font-size: 2.5rem;
 }
@@ -642,8 +638,8 @@ ul.dropdown-menu li {
 }
 
 .bg-1 {
-  background: url("../images/bg/influencer11.jpg") no-repeat;
-  background-size:cover;
+  background: url("../images/bg/section-bg5.jpg") no-repeat 50% 50%;
+  background-size: cover;
 }
 
 .bg-2 {
@@ -1016,7 +1012,7 @@ ul.dropdown-menu li {
   }
 }
 .cta {
-  background: url("../images/bg/influencer.jpg") no-repeat;
+  background: url("../images/bg/1682779268066.png") no-repeat;
   background-size: cover;
   position: relative;
 }
