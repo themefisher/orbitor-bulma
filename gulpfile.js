@@ -39,7 +39,7 @@ gulp.task("html:build", function () {
     )
     .pipe(
       comments(`
-Copyright 2023 Nextgen Vidhya Pvt Ltd
+Copyright &copy; 2023 Nextgen Vidhya Pvt Ltd
     `)
     )
     .pipe(gulp.dest(path.build.dir))
