@@ -10,6 +10,7 @@
 		float: left;
 		height: unset;
 		width: unset;
+		font-weight: lighter;
 	}
 
 	.content{
@@ -43,7 +44,7 @@
 	padding:50px 40px;
 	background: $light;
 	border-radius: 10px;
-	box-shadow: 0px 0px 40px 0px rgba(85, 128, 255, 0.2);
+	box-shadow: 0px 0px 40px 0px rgba(141, 151, 181, 0.2);
 
 	i{
 		font-size: 35px;
