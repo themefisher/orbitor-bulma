@@ -16,40 +16,33 @@
 
         <div class="columns is-multiline">
             <div class="column is-8-desktop">
-                <form id="contact-form" class="contact__form" method="post" action="mail.php">
-                 <!-- form message -->
+                <form id="contact-form" class="contact__form" method="post" action="#">
+                    <!-- form message -->
                     <div class="columns is-multiline">
                         <div class="column is-12">
-
-                            <div class="notification is-success contact__msg mb-4" style="display:none" role="alert">
+                            <div class="notification is-success contact__msg mb-4" style="display:none"
+                                role="alert">
                                 Your message was sent successfully.
                             </div>
-
-                            <!-- <select class="input" id="exampleFormControlSelect1">
-                                <option>I Need help in ...</option>
-                                <option>Software Design</option>
-                                <option>Development cycle</option>
-                                <option>Software Development</option>
-                                <option>Maintenance</option>
-                                <option>Process Query</option>
-                                <option>Cost and Duration</option>
-                                <option>Modal Delivery</option>
-                            </select> -->
                         </div>
                         <div class="column is-12">
                             <input name="name" id="name" type="text" class="input" placeholder="Your Name">
                         </div>
                         <div class="column is-12">
-                            <input name="email" id="email" type="email" class="input" placeholder="Email Address">
+                            <input name="email" id="email" type="email" class="input"
+                                placeholder="Email Address">
                         </div>
                         <div class="column is-12">
-                            <input name="subject" id="subject" type="text" class="input" placeholder="Your Subject">
+                            <input name="subject" id="subject" type="text" class="input"
+                                placeholder="Your Subject">
                         </div>
                         <div class="column is-12">
-                            <textarea name="message" id="message" class="input" placeholder="Your Message"></textarea>
+                            <textarea name="message" id="message" class="input"
+                                placeholder="Your Message"></textarea>
                         </div>
                         <div class="column is-12">
-                            <button class="btn btn-main" name="submit" type="submit">Send Message</button>
+                            <button class="btn btn-main" type="button" onclick="submitForm()">Send
+                                Message</button>
                         </div>
                     </div>
                 </form>
@@ -77,7 +70,6 @@
 
                     <ul class="social-icons list-inline mt-5">
                         <li class="list-inline-item">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a href="https://instagram.com/buhrata?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
@@ -153,6 +145,57 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    function submitForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+
+        var apiUrl = "https://wap.xhost.co.in/wapp/api/send";
+        var apiKey = "23e01c78b684460e981917202ef74084";
+        var mobile = "9689134275";
+
+        var apiLink =
+            `${apiUrl}?apikey=${apiKey}&mobile=${mobile}&msg=*New%20Contact%20Form%20Request*%0A%0AName%3A%20${name}%0AEmail%3A%20${email}%0ASubject%3A%20${subject}%0AMessage%3A%20${message}`;
+
+        // Show loading message
+        // document.querySelector(".loading").style.display = "block";
+
+        fetch(apiLink, {
+            method: "GET"
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    // Show success message
+                    document.querySelector(".sent-message").style.display = "block";
+                } else {
+                    // Show error message
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+                    document.querySelector(".error-message").innerHTML = "Error: " + data.message;
+                    document.querySelector(".error-message").style.display = "block";
+                }
+            })
+            .catch(error => {
+                // Show error message
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
+                document.querySelector(".error-message").innerHTML = "Error: " + error.message;
+                document.querySelector(".error-message").style.display = "block";
+            })
+            .finally(() => {
+                // Hide loading message
+                document.querySelector(".loading").style.display = "none";
+            });
+    }
+</script>
+
 
 @@include('blocks/footer.htm')
 @@include('footer.htm')
