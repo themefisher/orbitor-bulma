@@ -1,5 +1,5 @@
 .testimonial-wrap {
-	margin-left: calc((100% - 1140px)/2);
+	margin-left: 10px;
 	margin-right: -10%;
 	margin-top: -30px;
 }
@@ -17,7 +17,7 @@
 		padding: 60px 40px;
 		position: relative;
 		margin-bottom: 30px;
-		font-size: 18px;
+		font-size: 15px;
 
 		&:after {
 			position: absolute;
@@ -40,7 +40,7 @@
 			margin-bottom: 20px;
 
 			img {
-				border-radius: 100%;
+				border-radius: 40px;
 			}
 		}
 

@@ -10,7 +10,7 @@
    }
 
    .block {
-      padding-top: 75px;
+      padding-top: 45px;
       @include mobile {
          padding-top: 100px;
       }
@@ -23,6 +23,15 @@
          text-transform: capitalize;
       }
    }
+}
+.playstore-img{
+   margin-right: 20px;
+}
+.playstore-img:hover{
+   opacity: 0.5;
+}
+.app-store-img:hover{
+   opacity: 1;
 }
 
 .letter-spacing {

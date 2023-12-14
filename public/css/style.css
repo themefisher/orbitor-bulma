@@ -106,6 +106,8 @@ input[type=tel] {
   background: #FF715B;
   color: #fff;
   border-color: #FF715B;
+  position: relative;
+  top: -5vh;
 }
 .btn-main:hover {
   color: #FF715B;
@@ -393,7 +395,7 @@ a:focus {
 }
 
 .ml-auto {
-  margin-left: auto !important;
+  margin-left: auto;
 }
 
 .text-white {
@@ -528,6 +530,10 @@ textarea.input {
 
 .navbar {
   background-color: transparent;
+}
+
+.nav-start-start {
+  margin-left: 10vw !important;
 }
 
 @media (max-width: 1023px) {
@@ -674,6 +680,18 @@ ul.dropdown-menu li {
   font-weight: 400;
   letter-spacing: -1.2px;
   text-transform: capitalize;
+}
+
+.playstore-img {
+  margin-right: 20px;
+}
+
+.playstore-img:hover {
+  opacity: 0.5;
+}
+
+.app-store-img:hover {
+  opacity: 1;
 }
 
 .letter-spacing {
@@ -1039,7 +1057,7 @@ ul.dropdown-menu li {
 }
 
 .testimonial-wrap {
-  margin-left: calc((100% - 1140px) / 2);
+  margin-left: 10px;
   margin-right: -10%;
   margin-top: -30px;
 }
@@ -1057,7 +1075,7 @@ ul.dropdown-menu li {
   padding: 60px 40px;
   position: relative;
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 15px;
 }
 .testimonial-block p:after {
   position: absolute;
@@ -1076,7 +1094,7 @@ ul.dropdown-menu li {
   margin-bottom: 20px;
 }
 .testimonial-block .client-info .client-img img {
-  border-radius: 100%;
+  border-radius: 30px;
 }
 .testimonial-block .client-info .info h6 {
   margin-bottom: 0px;
