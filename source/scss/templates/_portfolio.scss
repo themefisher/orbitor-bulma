@@ -1,5 +1,6 @@
 .portfolio {
 	position: relative;
+	
 
 	&:before {
 		position: absolute;
@@ -9,6 +10,7 @@
 		width: 100%;
 		height: 500px;
 		background-color: #f7f7f7;
+		margin-left: 10px;
 	}
 }
 
