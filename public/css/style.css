@@ -53,6 +53,10 @@ p {
   color: rgb(76, 88, 100);
 }
 
+p strong {
+  color: rgb(76, 88, 100);
+}
+
 .navbar-toggle .icon-bar {
   background: #FF715B;
 }
@@ -514,6 +518,10 @@ textarea.input {
 }
 .navbar-brand .navbar-item img {
   max-height: unset;
+}
+
+.ml-auto {
+  margin-left: 10vh;
 }
 
 .navbar-burger {
