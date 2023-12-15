@@ -880,6 +880,9 @@ ul.dropdown-menu li {
 .feature-block i {
   font-size: 40px;
 }
+.feature-block h2 {
+  font-size: 25px;
+}
 .feature-block h5 {
   margin-top: 20px;
 }
