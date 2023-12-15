@@ -1,13 +1,15 @@
-# Orbitor Free Bulma Agency Template
+# Buhrata Main Website
 
-![orbitor](https://demo.themefisher.com/thumbnails/orbitor.png)
+<!-- Basic Website Stats -->
+<a href="https://www.codefactor.io/repository/github/mitra-fintech/buhrata-website"><img src="https://www.codefactor.io/repository/github/mitra-fintech/buhrata-website/badge" alt="CodeFactor" /></a>
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Mitra-Fintech/buhrata-website">
+<img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/w/Mitra-Fintech/buhrata-website">
 
-👉🏻[View Live Preview](https://demo.themefisher.com/orbitor-bulma/)
 
 <!-- download -->
 ## Download And installation
 
-Download this template from [Github](https://github.com/themefisher/orbitor-bulma/archive/main.zip)
+Clone This From Here Only
 
 <!-- installation -->
 ### Basic Usages
