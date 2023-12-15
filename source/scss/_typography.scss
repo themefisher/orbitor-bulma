@@ -16,7 +16,7 @@ body {
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
   font-family: $secondary-font;
   font-weight:900;
-  color:$black;
+  color:rgb(76, 88, 100);
 }
 
 h1 ,.h1{
@@ -49,4 +49,5 @@ h6,.h6 {
 
 p{
   line-height: 30px;
+  color: rgb(76, 88, 100);
 }

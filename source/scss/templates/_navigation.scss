@@ -50,8 +50,9 @@
       font-family: $primary-font;
       text-transform: capitalize;
       font-size: 18px;
+      color: rgb(76, 88, 100);
       
-      padding: 8px !important;
+      padding: 0px !important;
       transition: all .25s ease;
       &:hover {
          color: $primary-color !important;

@@ -19,7 +19,7 @@ body {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  color: #111;
+  color: rgb(76, 88, 100);
 }
 
 h1, .h1 {
@@ -50,6 +50,7 @@ h6, .h6 {
 
 p {
   line-height: 30px;
+  color: rgb(76, 88, 100);
 }
 
 .navbar-toggle .icon-bar {
@@ -106,8 +107,6 @@ input[type=tel] {
   background: #FF715B;
   color: #fff;
   border-color: #FF715B;
-  position: relative;
-  top: -5vh;
 }
 .btn-main:hover {
   color: #FF715B;
@@ -395,7 +394,7 @@ a:focus {
 }
 
 .ml-auto {
-  margin-left: auto;
+  margin-left: auto !important;
 }
 
 .text-white {
@@ -532,10 +531,6 @@ textarea.input {
   background-color: transparent;
 }
 
-.nav-start-start {
-  margin-left: 10vw !important;
-}
-
 @media (max-width: 1023px) {
   .navbar-menu {
     text-align: center;
@@ -562,7 +557,8 @@ textarea.input {
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
   font-size: 18px;
-  padding: 8px !important;
+  color: rgb(76, 88, 100);
+  padding: 0px !important;
   transition: all 0.25s ease;
 }
 #navbar .navbar-link:hover {
@@ -667,7 +663,7 @@ ul.dropdown-menu li {
   }
 }
 .banner .block {
-  padding-top: 75px;
+  padding-top: 45px;
 }
 @media (max-width: 575px) {
   .banner .block {
@@ -680,6 +676,7 @@ ul.dropdown-menu li {
   font-weight: 400;
   letter-spacing: -1.2px;
   text-transform: capitalize;
+  color: rgb(76, 88, 100);
 }
 
 .playstore-img {
@@ -793,6 +790,7 @@ ul.dropdown-menu li {
 .icon-block h5 {
   margin-top: 25px;
   margin-bottom: 15px;
+  color: rgb(76, 88, 100);
 }
 .icon-block p {
   margin-bottom: 0px;
@@ -1048,6 +1046,10 @@ ul.dropdown-menu li {
   }
 }
 
+.mb-5 {
+  color: rgb(76, 88, 100);
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -1094,10 +1096,11 @@ ul.dropdown-menu li {
   margin-bottom: 20px;
 }
 .testimonial-block .client-info .client-img img {
-  border-radius: 30px;
+  border-radius: 40px;
 }
 .testimonial-block .client-info .info h6 {
   margin-bottom: 0px;
+  color: rgb(76, 88, 100);
 }
 
 @media (max-width: 575px) {
@@ -1263,16 +1266,20 @@ ul.dropdown-menu li {
   width: 20px;
 }
 
+h5 {
+  color: rgb(76, 88, 100);
+}
+
 .short-info li {
   margin-bottom: 25px;
 }
 
 .social-icons li {
-  margin: 0 6px;
+  margin: 0 0;
 }
 .social-icons a {
-  margin-right: 10px;
-  font-size: 18px;
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 .short-info {
