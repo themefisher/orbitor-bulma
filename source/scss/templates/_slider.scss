@@ -27,12 +27,18 @@
 }
 .playstore-img{
    margin-right: 20px;
+   width: 40px;
+
 }
 .playstore-img:hover{
    opacity: 0.5;
 }
-.app-store-img:hover{
-   opacity: 1;
+.apps-store-img{
+   margin-left: 0px;
+   width: 40px;
+}
+.apps-store-img:hover{
+   opacity: 0.5;
 }
 
 .letter-spacing {
