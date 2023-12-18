@@ -565,7 +565,7 @@ textarea.input {
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
   font-size: 18px;
-  color: rgb(76, 88, 100);
+  color: black;
   padding: 0px !important;
   transition: all 0.25s ease;
 }
@@ -662,6 +662,7 @@ ul.dropdown-menu li {
   overflow: hidden;
   background: #fff;
   background: url("../images/background001.png") no-repeat 80% 50%;
+  height: 100vh;
   background-size: cover;
   padding: 120px 0px;
 }
@@ -768,6 +769,10 @@ ul.dropdown-menu li {
 }
 .about-item .content {
   padding-left: 80px;
+}
+
+.about-logo {
+  width: 60px;
 }
 
 .process {
@@ -1072,11 +1077,12 @@ ul.dropdown-menu li {
 }
 
 .playstore-img {
-  width: 40px;
+  width: 130px;
+  margin-top: 20px;
 }
 
 .apps-store-img {
-  width: 40px;
+  width: 130px;
 }
 
 .text-color-primary {
@@ -1263,6 +1269,10 @@ ul.dropdown-menu li {
   color: #111;
 }
 
+.about-log {
+  width: 20px;
+}
+
 .contact-form-wrap .form-group {
   padding-bottom: 15px;
   margin: 0px;
@@ -1305,6 +1315,15 @@ h5 {
 .social-icons a {
   margin-right: 20px;
   font-size: 20px;
+}
+
+.contact-text {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.contact-text span {
+  color: #FF715B;
 }
 
 .short-info {

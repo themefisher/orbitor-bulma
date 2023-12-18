@@ -3,6 +3,7 @@
    overflow: hidden;
    background: $light;
    background: url("../images/background001.png") no-repeat 80% 50%;
+   height: 100vh;
    background-size: cover;
    padding: 120px 0px;
    @include mobile {
