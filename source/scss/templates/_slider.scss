@@ -3,6 +3,7 @@
    overflow: hidden;
    background: $light;
    background: url("../images/background001.png") no-repeat 80% 50%;
+   height: 100vh;
    background-size: cover;
    padding: 120px 0px;
    @include mobile {
@@ -27,12 +28,18 @@
 }
 .playstore-img{
    margin-right: 20px;
+   width: 40px;
+
 }
 .playstore-img:hover{
    opacity: 0.5;
 }
-.app-store-img:hover{
-   opacity: 1;
+.apps-store-img{
+   margin-left: 0px;
+   width: 40px;
+}
+.apps-store-img:hover{
+   opacity: 0.5;
 }
 
 .letter-spacing {

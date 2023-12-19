@@ -60,16 +60,16 @@
 			 <div class="navbar-menu" id="navigation">
 				 <ul class="navbar-start ml-auto">
 					 <li class="navbar-item">
-						 <a class="navbar-link" href="index.html">Home</a>
+						 <a class="navbar-link" href="index.html" style="color: #FED8B1;margin-right: 20px;">Home</a>
 					 </li>
 					 
 					 <li class="navbar-item">
-						 <a class="navbar-link" href="about.html">About</a>
+						 <a class="navbar-link" href="about.html" style="color: #FED8B1; margin-right: 20px;">About</a>
 					 </li>
 					 
-					 <li class="navbar-item">
+					 <!-- <li class="navbar-item">
 						 <a class="navbar-link" href="project.html">Portfolio</a>
-					 </li>
+					 </li> -->
  
 					 <!-- <li class="navbar-item has-dropdown">
 						 <a class="navbar-link">Pages</a>
@@ -82,7 +82,7 @@
 					 </li> -->
 					 
 					 <li class="navbar-item">
-						 <a class="navbar-link" href="contact.html">Contact</a>
+						 <a class="navbar-link" href="contact.html" style="color: #FED8B1;">Contact</a>
 					 </li>
 				 </ul>
 				 <!-- <ul class="navbar-end ml-0">
@@ -94,6 +94,12 @@
 		 </nav>
 	</div>
  </div>
+ <style>
+.ml-auto{
+	left: -5vw;
+	position: relative;
+}
+ </style>
 <section class="page-title bg-1">
    <div class="container">
       <div class="columns">
@@ -128,25 +134,28 @@
                     <!-- form message -->
                     <div class="columns is-multiline">
                         <div class="column is-12">
-                            <div class="notification is-success contact__msg mb-4" style="display:none"
-                                role="alert">
+                            <div class="notification is-success contact__msg mb-4" style="display:none" role="alert">
                                 Your message was sent successfully.
                             </div>
+                        </div>
+                        <div class="column is-12">
+                            <select id="dropdown" name="dropdown" class="input">
+                                <option value="" disabled selected hidden>Select an option</option>
+                                <option value="option1">I am a brand</option>
+                                <option value="option2">I am an influencer</option>
+                            </select>
                         </div>
                         <div class="column is-12">
                             <input name="name" id="name" type="text" class="input" placeholder="Your Name">
                         </div>
                         <div class="column is-12">
-                            <input name="email" id="email" type="email" class="input"
-                                placeholder="Email Address">
+                            <input name="email" id="email" type="email" class="input" placeholder="Email Address">
                         </div>
                         <div class="column is-12">
-                            <input name="subject" id="subject" type="text" class="input"
-                                placeholder="Your Subject">
+                            <input name="subject" id="subject" type="text" class="input" placeholder="Your Subject">
                         </div>
                         <div class="column is-12">
-                            <textarea name="message" id="message" class="input"
-                                placeholder="Your Message"></textarea>
+                            <textarea name="message" id="message" class="input" placeholder="Your Message"></textarea>
                         </div>
                         <div class="column is-12">
                             <button class="btn btn-main" type="button" onclick="submitForm()">Send
@@ -158,10 +167,10 @@
 
             <div class="column is-4-desktop">
                 <div class="short-info">
-                     <ul class="list-unstyled">
-                         <li>
+                    <ul class="list-unstyled">
+                        <li>
                             <h5>Call Us</h5>
-                            +91 01169270421
+                            +91 9653672539
                         </li>
                         <li>
                             <h5>Email Us</h5>
@@ -169,7 +178,7 @@
                         </li>
                         <li>
                             <h5>Location Map</h5>
-                            511,Nextgen Vidhya Pvt.Ltd
+                            512,Nextgen Vidhya Pvt.Ltd
                             Corporate Annexe,IB Patel Road,
                             Goregaon East,Mumbai,Maharashtra
                             India 400065
@@ -180,14 +189,15 @@
                         <li class="list-inline-item">
                         </li>
                         <li class="list-inline-item">
-                            <a href="contact@burhata.com"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="mailto:contact@burhata.com"><i class="fa-solid fa-envelope"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://instagram.com/buhrata?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://instagram.com/buhrata?igshid=OGQ5ZDc2ODk2ZA=="><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </li>
-                        <li class="list-inline-item">
+                        <!-- <li class="list-inline-item">
                             <a href="#"><i class="ti-facebook mr-2"></i></a>
-                        </li>
+                        </li> -->
                         <!-- <li class="list-inline-item">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         </li> -->
@@ -196,7 +206,7 @@
             </div>
         </div>
 
-         <!-- <div class="columns is-multiline">
+        <!-- <div class="columns is-multiline">
             <div class="column is-12">
                  <div class="google-map mt-90 mb-6">
                     <div id="map"></div>
@@ -223,7 +233,7 @@
                 </div>
             </div> -->
 
-            <!-- <div class="column is-4-desktop is-6-tablet">
+        <!-- <div class="column is-4-desktop is-6-tablet">
                 <div class="contact-info">
                     <h4 class="mb-4">USA Location</h4>
                     <ul class="address-block list-unstyled">
@@ -240,7 +250,7 @@
                 </div>
             </div> -->
 
-            <!-- <div class="column is-4-desktop is-6-tablet">
+        <!-- <div class="column is-4-desktop is-6-tablet">
                 <div class="contact-info">
                     <h4 class="mb-4">Europe</h4>
                     <ul class="address-block list-unstyled">
@@ -256,7 +266,7 @@
                     </ul>
                 </div>
             </div> -->
-        </div>
+    </div>
     </div>
 </section>
 
@@ -270,10 +280,10 @@
 
         var apiUrl = "https://wap.xhost.co.in/wapp/api/send";
         var apiKey = "23e01c78b684460e981917202ef74084";
-        var mobile = "9689134275";
+        var mobile = "09653672539";
 
         var apiLink =
-            `${apiUrl}?apikey=${apiKey}&mobile=${mobile}&msg=*New%20Contact%20Form%20Request*%0A%0AName%3A%20${name}%0AEmail%3A%20${email}%0ASubject%3A%20${subject}%0AMessage%3A%20${message}`;
+            `${apiUrl}?apikey=${apiKey}&mobile=${mobile}&msg=*Contact%20Form%20Burhata*%0A%0AName%3A%20*${name}*%0AEmail%3A%20${email}%0ASubject%3A%20${subject}%0AMessage%3A%20${message}`;
 
         // Show loading message
         // document.querySelector(".loading").style.display = "block";
@@ -352,13 +362,13 @@
 			<div class="column is-3-widescreen is-6-desktop is-6-tablet">
 				<div class="widget widget-contact">
 					<h4 class="is-capitalize mb-4">Get in Touch</h4>
-					<h6><a href="mailto:contact@buhrata.com" > <i class="ti-headphone-alt mr-3"></i>contact@buhrata.com</a></h6>
-					<h6><a href="tel:09653672539" > <i class="ti-mobile mr-3"></i>09653672539</a></h6>
+					<h6><a href="mailto:contact@buhrata.com" > <i class="fa-solid fa-inbox"></i> contact@buhrata.com</a></h6>
+					<h6><a href="tel:09653672539" > <i class="fa-solid fa-phone"></i> 09653672539</a></h6>
 
 					<ul class="list-inline footer-socials mt-5">
-						<li class="list-inline-item"><a href="contact@burhata.com"><i class="fa-solid fa-envelope"></i></a></li>
+						<li class="list-inline-item"><a href="mailto:contact@burhata.com"><i class="fa-solid fa-envelope"></i></a></li>
 						<li class="list-inline-item"><a href="https://instagram.com/buhrata?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="ti-facebook mr-2"></i></a></li>
+						<!-- <li class="list-inline-item"><a href="#"><i class="ti-facebook mr-2"></i></a></li> -->
 					</ul>
 				</div>
 			</div>
@@ -368,7 +378,7 @@
 			<div class="columns">
 				<div class="column is-6-widescreen">
 					<div class="copyright">
-						&copy; Copyright Reserved to <span class="text-color">Buhrata</span> by <a href="#" target="_blank">Nextgen Vidhya Pvt Ltd.</a>
+						&copy; Copyright Reserved to <span class="text-color">Buhrata</span> by <a href="https://nextgentechno.in/" target="_blank">Nextgen Vidhya Pvt Ltd.</a>
 					</div>
 				</div>
 			</div>
