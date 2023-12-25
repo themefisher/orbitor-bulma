@@ -27,8 +27,8 @@
                         <div class="column is-12">
                             <select id="dropdown" name="dropdown" class="input">
                                 <option value="" disabled selected hidden>Select an option</option>
-                                <option value="option1">I am a brand</option>
-                                <option value="option2">I am an influencer</option>
+                                <option value="I am a brand">I am a brand</option>
+                                <option value="I am an influencer">I am an influencer</option>
                             </select>
                         </div>
                         <div class="column is-12">
@@ -36,6 +36,9 @@
                         </div>
                         <div class="column is-12">
                             <input name="email" id="email" type="email" class="input" placeholder="Email Address">
+                        </div>
+                        <div class="column is-12">
+                            <input name="mobile" id="mobile" type="text" class="input" placeholder="Mobile Number">
                         </div>
                         <div class="column is-12">
                             <input name="subject" id="subject" type="text" class="input" placeholder="Your Subject">
@@ -56,7 +59,9 @@
                     <ul class="list-unstyled">
                         <li>
                             <h5>Call Us</h5>
-                            +91 9653672539
+                            +91  96536 72539
+
+
                         </li>
                         <li>
                             <h5>Email Us</h5>
@@ -158,52 +163,68 @@
 
 
 <script>
-    function submitForm() {
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var subject = document.getElementById("subject").value;
-        var message = document.getElementById("message").value;
+     function submitForm() {
+        const dropdown = document.getElementById("dropdown").value;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
 
-        var apiUrl = "https://wap.xhost.co.in/wapp/api/send";
-        var apiKey = "23e01c78b684460e981917202ef74084";
-        var mobile = "09653672539";
+        if (!dropdown || !name || !email || !mobile|| !subject || !message) {
+          return alert("Please fill all the field")
+        }else{
 
-        var apiLink =
-            `${apiUrl}?apikey=${apiKey}&mobile=${mobile}&msg=*Contact%20Form%20Burhata*%0A%0AName%3A%20*${name}*%0AEmail%3A%20${email}%0ASubject%3A%20${subject}%0AMessage%3A%20${message}`;
+        const sentence = dropdown;
+        const words = sentence.split(" ");
+        const lastWord = words[words.length - 1];
 
-        // Show loading message
-        // document.querySelector(".loading").style.display = "block";
 
-        fetch(apiLink, {
-            method: "GET"
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    // Show success message
-                    document.querySelector(".sent-message").style.display = "block";
-                } else {
-                    // Show error message
-                    setTimeout(function () {
-                        location.reload();
-                    }, 2000);
-                    document.querySelector(".error-message").innerHTML = "Error: " + data.message;
-                    document.querySelector(".error-message").style.display = "block";
-                }
-            })
-            .catch(error => {
-                // Show error message
-                setTimeout(function () {
-                    location.reload();
-                }, 2000);
-                document.querySelector(".error-message").innerHTML = "Error: " + error.message;
-                document.querySelector(".error-message").style.display = "block";
-            })
-            .finally(() => {
-                // Hide loading message
-                document.querySelector(".loading").style.display = "none";
-            });
-    }
+          // Example usage:
+          const destinationPhoneNumber = '919689134275'; // Replace with the actual destination phone number
+          const templateParams = [
+            'Buhrata - '+ dropdown,
+            name,
+            email,
+            mobile,
+            subject,
+            message
+          ];
+      
+
+// Call the function with dynamic values
+sendWhatsAppMessage(destinationPhoneNumber, templateParams);
+        }
+      }
+
+function sendWhatsAppMessage(destinationPhoneNumber, templateParams) {
+  const apiUrl = 'https://api.gupshup.io/wa/api/v1/template/msg';
+  const apiKey = 'y6augsnlvufcalxps2grvxgbmxvdjgo7';
+
+  const postData = new URLSearchParams();
+  postData.append('channel', 'whatsapp');
+  postData.append('source', '12345293827');
+  postData.append('destination', destinationPhoneNumber); // Use the provided destinationPhoneNumber
+  postData.append('src.name', 'ChatWeaver');
+  postData.append('template', JSON.stringify({
+    id: 'e7bac4b3-41ee-414a-896f-1b8c398d8eb3',
+    params: templateParams // Use the provided templateParams array
+  }));
+
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Cache-Control': 'no-cache',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'apikey': apiKey,
+      'cache-control': 'no-cache',
+    },
+    body: postData,
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
 </script>
 
 

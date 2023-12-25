@@ -1,8 +1,9 @@
+
 .banner {
    position: relative;
    overflow: hidden;
    background: $light;
-   background: url("../images/background001.png") no-repeat 80% 50%;
+   background: url("../images/background001.png") no-repeat 60% 50%;
    height: 100vh;
    background-size: cover;
    padding: 120px 0px;
@@ -12,6 +13,7 @@
 
    .block {
       padding-top: 45px;
+      color: rgb(76, 88, 100);
       @include mobile {
          padding-top: 100px;
       }
@@ -52,13 +54,13 @@
 
 @include large-desktop {
    .banner {
-      background: $light !important;
+      // background: $light !important;
    }
 }
 
 @include desktop {
    .banner {
-      background: $light !important;
+      // background: $light !important;
    }
 }
 
@@ -69,7 +71,7 @@
    }
 
    .banner {
-      background: $light !important;
+      // background: $light !important;
    }
 }
 
@@ -80,7 +82,7 @@
    }
 
    .banner {
-      background: $light !important;
+      // background: $light !important;
    }
 }
 
@@ -91,7 +93,7 @@
    }
 
    .banner {
-      background: $light !important;
+      // background: $light !important;
    }
 
 }

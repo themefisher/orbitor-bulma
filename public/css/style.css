@@ -661,7 +661,7 @@ ul.dropdown-menu li {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background: url("../images/background001.png") no-repeat 80% 50%;
+  background: url("../images/background001.png") no-repeat 60% 50%;
   height: 100vh;
   background-size: cover;
   padding: 120px 0px;
@@ -673,6 +673,7 @@ ul.dropdown-menu li {
 }
 .banner .block {
   padding-top: 45px;
+  color: rgb(76, 88, 100);
 }
 @media (max-width: 575px) {
   .banner .block {
@@ -714,23 +715,10 @@ ul.dropdown-menu li {
   color: #FF715B;
 }
 
-@media (max-width: 1215px) {
-  .banner {
-    background: #fff !important;
-  }
-}
-@media (max-width: 1023px) {
-  .banner {
-    background: #fff !important;
-  }
-}
 @media (max-width: 768px) {
   .banner .block h1 {
     font-size: 56px;
     line-height: 70px;
-  }
-  .banner {
-    background: #fff !important;
   }
 }
 @media (max-width: 575px) {
@@ -738,17 +726,11 @@ ul.dropdown-menu li {
     font-size: 38px;
     line-height: 50px;
   }
-  .banner {
-    background: #fff !important;
-  }
 }
 @media (max-width: 400px) {
   .banner .block h1 {
     font-size: 28px;
     line-height: 40px;
-  }
-  .banner {
-    background: #fff !important;
   }
 }
 .about-item i {
