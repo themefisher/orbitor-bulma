@@ -1742,6 +1742,7 @@ h5 {
 
 .lh-35 {
   line-height: 35px;
+  margin-left: 20px;
 }
 
 .logo {
@@ -1758,6 +1759,7 @@ h5 {
 .widget h4 {
   color: #fff;
   font-weight: 600;
+  margin-left: 20px;
 }
 .widget a {
   color: rgba(255, 255, 255, 0.7);
