@@ -1,0 +1,140 @@
+@@include('header.htm')
+@@include('blocks/navigation.htm')
+@@include('blocks/page-title.htm', {
+"title": "FAQs",
+"description": "FAQs"
+})
+
+<!-- @@include('blocks/feature-2.htm') -->
+<!-- Give a margin -->
+<div style="height: 50px;"></div>
+<div class="container">
+	<h1>Frequently asked questions for <img src="images/Buhratalogo3.png" alt="faq" class="privacy-logo"></h1><br>
+	<!-- Section 1 -->
+	<h3>Q. Do we have to pay any fees to be on <img src="images/Buhratalogo3.png" alt="faq" style="width: 70px;">?</h3>
+	<p><strong>A.</strong> <img src="images/Buhratalogo3.png" alt="faq" style="width: 60px;"> doesn't charge brands platform fees; We work on a pay-out commission model i.e brands only pay commission for successful sales.</p><br>
+	<!-- Section 2 -->
+	<h3> Q. How does a brand track sales and insights and measure ROI?</h3>
+	<p><strong>A.</strong>
+        <img src="images/Buhratalogo3.png" alt="faq" style="width: 60px;">, has a separate dashboard for brands where they can track all the sales and monitor insights of performance metrics. Brands will use the same dashboard to view incoming requests for samples.</p><br>
+	<!-- Section 3 -->
+	<h3>Q. Why is integration necessary?</h3>
+	<p><strong>A.</strong>
+        First, our app will display prices and discounts set on your website. It's critical that your website and our app are in sync. Second, since customers will ultimately make purchases on your website, we need to keep track of the sales that have come from influencers using our app.</p><br>
+	<!-- Section 4 -->
+	<h3>Q. What are the steps included in integration?</h3>
+	<p><strong>A.</strong>
+        All a brand needs to do is contact our team; we will gather the relevant data from your team, and our technical team will do the integration. It's that easy and quick.</p><br>
+	<!-- Contact Information -->
+	<h3>Q.  Can a brand accept or reject a request for a sample?</h3>
+	<p><strong>A.</strong>
+        Yes, With the sample request, brands will be provided with the social media handle of influencers. After screening their profiles, the brand can make a decision of accepting or rejecting a request for a sample.
+    </p>
+    <h3>Ask Your Questions</h3>
+    <div class="columns is-multiline">
+        <div class="column is-8-desktop">
+            <form id="contact-form" class="contact__form" method="post" action="#">
+                <!-- form message -->
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                        <div class="notification is-success contact__msg mb-4" style="display:none" role="alert">
+                            Your message was sent successfully.
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <input name="name" id="name" type="text" class="input" placeholder="Name">
+                    </div>
+                    <div class="column is-12">
+                        <input name="email" id="email" type="email" class="input" placeholder="Email">
+                    </div>
+                    <div class="column is-12">
+                        <input name="number" id="number" type="text" class="input" placeholder="Mobile No.">
+                    </div>
+                    <div class="column is-12">
+                        <input name="brand" id="brand" type="text" class="input" placeholder="Brand">
+                    </div>
+                    
+                    <div class="column is-12">
+                        <textarea name="question" id="question" class="input" placeholder="Your Question"></textarea>
+                    </div>
+                    <div class="column is-12">
+                        <button class="btn btn-main" type="button" onclick="submitForm()">Submit Your Question</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    function submitForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const number = document.getElementById("number").value;
+      const brand = document.getElementById("brand").value;
+      const question = document.getElementById("question").value;
+
+      if (!name || !email || !number || !brand || !question) {
+        return alert("Please fill all the field")
+      }else{
+
+        // Example usage:
+        const destinationPhoneNumber = '919653672539'; // Replace with the actual destination phone number
+        const templateParams = [
+          'Buhrata-FAQ',
+          name,
+          email,
+          number,
+          brand,
+          question
+        ];
+    
+
+// Call the function with dynamic values
+sendWhatsAppMessage(destinationPhoneNumber, templateParams);
+document.getElementById("contact-form").reset();
+
+      }
+    }
+
+function sendWhatsAppMessage(destinationPhoneNumber, templateParams) {
+const apiUrl = 'https://api.gupshup.io/wa/api/v1/template/msg';
+const apiKey = 'y6augsnlvufcalxps2grvxgbmxvdjgo7';
+
+const postData = new URLSearchParams();
+postData.append('channel', 'whatsapp');
+postData.append('source', '12345293827');
+postData.append('destination', destinationPhoneNumber); // Use the provided destinationPhoneNumber
+postData.append('src.name', 'ChatWeaver');
+postData.append('template', JSON.stringify({
+  id: 'e7bac4b3-41ee-414a-896f-1b8c398d8eb3',
+  params: templateParams // Use the provided templateParams array
+}));
+
+fetch(apiUrl, {
+  method: 'POST',
+  headers: {
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'apikey': apiKey,
+    'cache-control': 'no-cache',
+  },
+  body: postData,
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+}
+  </script>
+
+<style>
+    h3{
+        font-size: 20px;
+    }
+</style>
+<!-- Margin -->
+<div style="height: 50px;"></div>
+<!-- @@include('blocks/testimonial.htm') -->
+  <!-- process_form.php -->
+@@include('blocks/footer.htm')
+@@include('footer.htm')
