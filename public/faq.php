@@ -31,14 +31,13 @@
         Yes, With the sample request, brands will be provided with the social media handle of influencers. After screening their profiles, the brand can make a decision of accepting or rejecting a request for a sample.
     </p>
     <h3>Ask Your Questions</h3>
-    <form id="contact-form" class="column is-12">
+    <form id="contact-form" class="column is-12" action="process_form.php" method="post">
         <input type="text" placeholder="Name" id="userName" name="userName" required><br><br>
         <input type="text" placeholder="Brand Name" id="brandName" name="brandName" required><br><br>
         <input type="email" placeholder="Email" id="userEmail" name="userEmail" required><br><br>
-        <textarea class="column is-12" placeholder="Your Question" id="userQuestion" name="userQuestion" required></textarea><br>
-        <button type="button" class="btn btn-main" onclick="submitQuestion()">Submit</button>
-    </form>
-    
+        <textarea class="column is-12" placeholder="Your Question" id="userQuestion" name="userQuestion" required style="width: 70%;height: 100px;"></textarea><br>
+        <button type="submit" class="btn btn-main">Submit</button>
+    </form>      
 </div>
 </div>
 <style>
@@ -50,34 +49,26 @@
 <div style="height: 50px;"></div>
 <!-- @@include('blocks/testimonial.htm') -->
   <!-- process_form.php -->
-<?php
+  <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $userName = $_POST["userName"];
+    $name = $_POST["userName"];
     $brandName = $_POST["brandName"];
-    $userEmail = $_POST["userEmail"];
-    $userQuestion = $_POST["userQuestion"];
+    $email = $_POST["userEmail"];
+    $question = $_POST["userQuestion"];
 
-    // Email details
-    $to = "your@email.com"; // Replace with your email address
-    $subject = "New Question from $userName";
+    $to = "bhavarvipul@gmail.com"; // Replace with your email address
+    $subject = "New Form Submission";
+    $message = "Name: $name\nBrand Name: $brandName\nEmail: $email\nQuestion: $question";
 
-    // Compose email message
-    $message = "Name: $userName\n";
-    $message .= "Brand Name: $brandName\n";
-    $message .= "Email: $userEmail\n";
-    $message .= "Question: $userQuestion\n";
-
-    // Send email
     mail($to, $subject, $message);
 
-    // You can also redirect the user to a thank you page
+    // Optionally, you can redirect the user to a thank you page
     header("Location: thank_you.html");
-    exit();
+} else {
+    // Handle invalid requests
+    echo "Invalid request";
 }
 ?>
-
-
 
 
 @@include('blocks/footer.htm')

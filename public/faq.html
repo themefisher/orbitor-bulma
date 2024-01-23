@@ -147,15 +147,102 @@
         Yes, With the sample request, brands will be provided with the social media handle of influencers. After screening their profiles, the brand can make a decision of accepting or rejecting a request for a sample.
     </p>
     <h3>Ask Your Questions</h3>
-    <form id="contact-form" class="column is-12">
-        <input type="text" placeholder="Name" id="userName" name="userName" required><br><br>
-        <input type="text" placeholder="Brand Name" id="brandName" name="brandName" required><br><br>
-        <input type="email" placeholder="Email" id="userEmail" name="userEmail" required><br><br>
-        <textarea class="column is-12" placeholder="Your Question" id="userQuestion" name="userQuestion" required style="width: 70%;height: 100px;"></textarea><br>
-        <button type="submit" class="btn btn-main">Submit</button>
-    </form>      
+    <div class="columns is-multiline">
+        <div class="column is-8-desktop">
+            <form id="contact-form" class="contact__form" method="post" action="#">
+                <!-- form message -->
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                        <div class="notification is-success contact__msg mb-4" style="display:none" role="alert">
+                            Your message was sent successfully.
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <input name="name" id="name" type="text" class="input" placeholder="Name">
+                    </div>
+                    <div class="column is-12">
+                        <input name="email" id="email" type="email" class="input" placeholder="Email">
+                    </div>
+                    <div class="column is-12">
+                        <input name="number" id="number" type="text" class="input" placeholder="Mobile No.">
+                    </div>
+                    <div class="column is-12">
+                        <input name="brand" id="brand" type="text" class="input" placeholder="Brand">
+                    </div>
+                    
+                    <div class="column is-12">
+                        <textarea name="question" id="question" class="input" placeholder="Your Question"></textarea>
+                    </div>
+                    <div class="column is-12">
+                        <button class="btn btn-main" type="button" onclick="submitForm()">Submit Your Question</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 </div>
+<script>
+    function submitForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const number = document.getElementById("number").value;
+      const brand = document.getElementById("brand").value;
+      const question = document.getElementById("question").value;
+
+      if (!name || !email || !number || !brand || !question) {
+        return alert("Please fill all the field")
+      }else{
+
+        // Example usage:
+        const destinationPhoneNumber = '919653672539'; // Replace with the actual destination phone number
+        const templateParams = [
+          'Buhrata-FAQ',
+          name,
+          email,
+          number,
+          brand,
+          question
+        ];
+    
+
+// Call the function with dynamic values
+sendWhatsAppMessage(destinationPhoneNumber, templateParams);
+document.getElementById("contact-form").reset();
+
+      }
+    }
+
+function sendWhatsAppMessage(destinationPhoneNumber, templateParams) {
+const apiUrl = 'https://api.gupshup.io/wa/api/v1/template/msg';
+const apiKey = 'y6augsnlvufcalxps2grvxgbmxvdjgo7';
+
+const postData = new URLSearchParams();
+postData.append('channel', 'whatsapp');
+postData.append('source', '12345293827');
+postData.append('destination', destinationPhoneNumber); // Use the provided destinationPhoneNumber
+postData.append('src.name', 'ChatWeaver');
+postData.append('template', JSON.stringify({
+  id: 'e7bac4b3-41ee-414a-896f-1b8c398d8eb3',
+  params: templateParams // Use the provided templateParams array
+}));
+
+fetch(apiUrl, {
+  method: 'POST',
+  headers: {
+    'Cache-Control': 'no-cache',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'apikey': apiKey,
+    'cache-control': 'no-cache',
+  },
+  body: postData,
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+}
+  </script>
+
 <style>
     h3{
         font-size: 20px;
@@ -165,8 +252,6 @@
 <div style="height: 50px;"></div>
 
   <!-- process_form.php -->
-
-
 <!-- footer Start -->
 <footer class="footer section">
 	<div class="container">
