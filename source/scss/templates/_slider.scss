@@ -12,10 +12,10 @@
    }
 
    .block {
-      padding-top: 45px;
+      padding-top: 120px;
       color: rgb(76, 88, 100);
       @include mobile {
-         padding-top: 100px;
+         padding-top: 150px;
       }
 
       h1 {
