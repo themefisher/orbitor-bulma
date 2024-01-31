@@ -1,0 +1,14 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.buhrata.user",
+        "sha256_cert_fingerprints": [
+          "D0:A2:5E:29:59:49:2C:B9:C3:D2:2E:CF:FC:CB:86:E3:FE:93:4F:E2:6F:80:C4:74:C5:B5:2D:46:E8:3E:0A:A3"
+        ]
+      }
+    }
+  ]
